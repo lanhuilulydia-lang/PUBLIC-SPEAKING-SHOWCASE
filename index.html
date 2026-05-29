@@ -683,7 +683,7 @@
                 <div class="relative bg-slate-100 rounded-xl overflow-hidden flex justify-center p-2.5 border border-slate-200">
                     <canvas id="posterCanvas" width="600" height="900" class="hidden"></canvas>
                     
-                    <img id="posterImage" src="" alt="Honor Poster" class="w-full max-w-sm rounded-lg shadow-md bg-white aspect-[2/3] block">
+                    <img id="posterImage" alt="Honor Poster" class="w-full max-w-sm rounded-lg shadow-md bg-white aspect-[2/3] hidden">
                 </div>
                 
                 <p data-zh="💡 提示：移动端用户可长按上方画幅直接存储至相册。" data-en="💡 Tip: Mobile users can long-press the canvas above to save to album." class="text-[11px] text-slate-400 text-center">💡 提示：移动端用户可长按上方画幅直接存储至相册。</p>
@@ -983,7 +983,6 @@
             ctx.fillStyle = '#94a3b8';
             ctx.font = '10px Courier New';
             ctx.fillText('Date: 2026.05.30', canvas.width / 2, 830);
-            const canvas = document.getElementById('posterCanvas');
             const posterImg = document.getElementById('posterImage');
             posterImg.src = canvas.toDataURL('image/png');
         }
